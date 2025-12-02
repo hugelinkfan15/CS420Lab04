@@ -11,7 +11,13 @@ int main (int argc, char *argv[])
 		return 1;
 	}
 	
+	if(access(argv[1],F_OK) != 0)
+	{
+		fprintf(stderr,"File \"%s\" does not exist.\n", argv[1]);
+		return 1;
+	}
 	link(argv[1],argv[2]);
 	unlink(argv[1]);
+	
 	return 0;
 }
