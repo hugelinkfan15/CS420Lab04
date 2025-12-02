@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	size_t bufSize = 4096;
 	char* buffer = malloc(bufSize);
 	int original = open(argv[1], O_RDONLY, 0644);
-	int copy = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC , 0644);
+	int copy = open(argv[2], O_WRONLY | O_CREAT , 0644);
 	
 	unsigned int bytesRead;
 	
