@@ -19,6 +19,13 @@ int main(int argc, char *argv[])
 	if(strcmp(argv[1],"mycopy") == 0)
 	{
 		pid = fork();
+		
+		if(pid<0)
+		{
+			perror("fork");
+			return 1;
+		}
+		
 		if(pid ==0)
 		{
 			execl("./mycopy",argv[1],argv[2],argv[3],0);
@@ -28,6 +35,13 @@ int main(int argc, char *argv[])
 	else if(strcmp(argv[1],"myremove") == 0)
 	{
 		pid = fork();
+		
+		if(pid<0)
+		{
+			perror("fork");
+			return 1;
+		}
+		
 		if(pid == 0)
 		{
 			execl("./myremove",argv[1],argv[2],0);
@@ -37,6 +51,12 @@ int main(int argc, char *argv[])
 	else if(strcmp(argv[1],"mymove") == 0)
 	{
 		pid = fork();
+		if(pid<0)
+		{
+			perror("fork");
+			return 1;
+		}
+		
 		if(pid == 0)
 		{
 			execl("./mymove",argv[1],argv[2],argv[3],0);
