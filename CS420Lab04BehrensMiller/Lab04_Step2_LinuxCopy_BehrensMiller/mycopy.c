@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
 	if(argc !=3)
 	{
-		fprintf(stderr, "Usage: %s <source_file> <target_file>\n", argv[0]);
+		fprintf(stderr, "Usage: %s <sourcefile> <targetfile>\n", argv[0]);
 		return 1;
 	}
 	size_t bufSize = 4096;

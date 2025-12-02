@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
 	if(argc != 2)
 	{
-		fprintf(stderr,"Usage: %s <target_file>\n", argv[0]);
+		fprintf(stderr,"Usage: %s <file>\n", argv[0]);
 		return 1;
 	}
 	//May come back to this, want to have program check to see if
